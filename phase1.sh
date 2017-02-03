@@ -25,4 +25,9 @@ make
 sudo make install
 sudo npm install -g npm
 sudo npm install -g cordova ionic
+cd ..
+sed -i 's/robbyrussell/rkj-repos/g' ~/.zshrc
+cat vimrc1 >> ~/.vimrc
+cat vimrc2 >> ~/.vimrc
+cat bashrc >> ~/.bashrc
 
