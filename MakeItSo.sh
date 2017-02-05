@@ -1,4 +1,7 @@
 #!/bin/sh
+dpkg --get-selections > list.txt
+sudo cp list.txt ../..
+sudo cp MakeItReset.sh ../..
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install -y xinit i3 gnome-terminal firefox
