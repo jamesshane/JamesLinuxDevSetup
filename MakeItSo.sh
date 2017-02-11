@@ -29,9 +29,16 @@ sudo make install
 sudo npm install -g npm
 sudo npm install -g cordova ionic
 cd ..
+sudo apt-get install mongodb -y
+sudo npm install -g gulp
+sudo npm install -g bower
+sudo npm install -g mean-cli
 sed -i 's/robbyrussell/rkj-repos/g' ~/.zshrc
 cat vimrc1 >> ~/.vimrc
 cat vimrc2 >> ~/.vimrc
 cat bashrc >> ~/.bashrc
 sudo apt-get install ubuntu-make -y
 sudo apt-get install -y virtualbox-guest-x11
+sudo chown -R $USER ~/.npm
+sudo chown $USER:$USER ~/.*
+

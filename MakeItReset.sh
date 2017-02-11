@@ -7,4 +7,5 @@ cd ~
 rm -fr *
 rm -fr .*
 cp /etc/skel/.* .
+sudo chown $USER:$USER ~/.*
 
