@@ -1,4 +1,5 @@
 #!/bin/sh
+chsh -s /bin/bash
 sudo dpkg --clear-selections
 sudo dpkg --set-selections < list.txt
 sudo apt-get autoremove

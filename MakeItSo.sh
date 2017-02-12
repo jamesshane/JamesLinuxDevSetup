@@ -37,6 +37,7 @@ sed -i 's/robbyrussell/rkj-repos/g' ~/.zshrc
 cat vimrc1 >> ~/.vimrc
 cat vimrc2 >> ~/.vimrc
 cat bashrc >> ~/.bashrc
+cat tmux.conf >> ~/.tmux.conf
 sudo apt-get install ubuntu-make -y
 sudo apt-get install -y virtualbox-guest-x11
 sudo chown -R $USER ~/.npm
