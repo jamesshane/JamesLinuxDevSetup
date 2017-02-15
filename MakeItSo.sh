@@ -42,4 +42,6 @@ sudo apt-get install ubuntu-make -y
 sudo apt-get install -y virtualbox-guest-x11
 sudo chown -R $USER ~/.npm
 sudo chown $USER:$USER ~/.*
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
 
