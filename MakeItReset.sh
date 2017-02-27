@@ -1,5 +1,4 @@
 #!/bin/sh
-chsh -s /bin/bash
 sudo dpkg --clear-selections
 sudo dpkg --set-selections < list.txt
 sudo apt-get autoremove
@@ -9,4 +8,5 @@ rm -fr *
 rm -fr .*
 cp /etc/skel/.* .
 sudo chown $USER:$USER ~/.*
+chsh -s /bin/bash
 
