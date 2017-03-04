@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 dpkg --get-selections > list.txt
 sudo cp list.txt ../..
 sudo cp MakeItReset.sh ../..
@@ -20,19 +20,6 @@ sudo mv PowerlineSymbols.otf /usr/share/fonts/
 sudo fc-cache -vf /usr/share/fonts/
 sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-#wget https://nodejs.org/dist/v6.9.5/node-v6.9.5.tar.gz
-#tar xvzf node-v6.9.5.tar.gz
-#cd node-v6.9.5
-#./configure
-#make
-#sudo make install
-#sudo npm install -g npm
-#sudo npm install -g cordova ionic
-#cd ..
-#sudo apt-get install mongodb -y
-#sudo npm install -g gulp
-#sudo npm install -g bower
-#sudo npm install -g mean-cli
 sed -i 's/robbyrussell/rkj-repos/g' ~/.zshrc
 cat vimrc1 >> ~/.vimrc
 cat vimrc2 >> ~/.vimrc
@@ -40,7 +27,6 @@ cat bashrc >> ~/.bashrc
 cat tmux.conf >> ~/.tmux.conf
 #sudo apt-get install ubuntu-make -y
 sudo apt-get install -y virtualbox-guest-x11
-#sudo chown -R $USER ~/.npm
 sudo chown $USER:$USER ~/.*
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
