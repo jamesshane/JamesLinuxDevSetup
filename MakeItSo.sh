@@ -7,10 +7,8 @@ sudo apt-get upgrade -y
 sudo apt-get install -y xinit i3 gnome-terminal firefox
 sudo apt-get install -y build-essential vim emacs tmux wget curl zsh htop git-core screen cmatrix vim-gtk
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-#sudo apt-get install vim-gtk -y
 sudo apt-get install python-setuptools -y
 sudo apt-get install python-pip -y
-#sudo apt-get install git -y
 sudo apt-get install fontconfig -y
 sudo -H pip install git+git://github.com/Lokaltog/powerline
 sudo -H pip install --upgrade pip
