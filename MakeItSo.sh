@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 dpkg --get-selections > list.txt
 sudo cp list.txt ../..
 sudo cp MakeItReset.sh ../..
@@ -28,6 +28,7 @@ sudo npm install -g npm
 sudo npm install -g cordova ionic
 cd ..
 sudo apt-get install mongodb -y
+sudo apt-get install elixir -y
 sudo npm install -g gulp
 sudo npm install -g bower
 sudo npm install -g mean-cli
