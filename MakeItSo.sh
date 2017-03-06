@@ -16,7 +16,7 @@ do
 case $i in
     -h|--help)
     shift # past argument=value
-	echo -e "Possible arguments:\n -m,--mean : Installs MEAN, default is no MEAN\n -q, --quick : Quick Powerline install, default is standard\n -h, --help : these instructions\n\n"
+    echo -e "Possible arguments:\n -m,--mean : Installs MEAN, default is no MEAN\n -q, --quick : Quick Powerline install (no ZSH), default is standard (w/ ZSH)\n -h, --help : these instructions\n\n"
 	exit 1
     ;;
     -m|--mean)
@@ -50,13 +50,12 @@ sudo cp MakeItReset.sh ../..
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install -y xinit i3 gnome-terminal firefox
-sudo apt-get install -y build-essential vim emacs tmux wget curl zsh htop git-core screen cmatrix vim-gtk
-sudo apt-get install fontconfig -y
+sudo apt-get install -y build-essential vim emacs tmux wget curl zsh htop git-core screen cmatrix vim-gtk fontconfig 
 #end
 if ${QUICK};
 then
 #install powerline quick
-sudo apt-get install powerline
+sudo apt-get install powerline -y
 #The author misspelled these. I fixed that, While it does not matter, I fixed it anyway.
 mkdir -p ~/.fonts
 wget https://github.com/powerline/fonts/raw/master/LiberationMono/Literation%20Mono%20Powerline.ttf -O ~/.fonts/Liberation\ Mono\ Powerline.ttf
@@ -83,6 +82,10 @@ cat vimrc2 >> ~/.vimrc
 cat bashrc >> ~/.bashrc
 cat tmux.conf >> ~/.tmux.conf
 #end
+#install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sed -i 's/robbyrussell/rkj-repos/g' ~/.zshrc
+#end
 fi
 #install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -107,10 +110,6 @@ sudo npm install -g bower
 sudo npm install -g mean-cli
 #end
 fi
-#install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-sed -i 's/robbyrussell/rkj-repos/g' ~/.zshrc
-#end
 #OTHER
 #sudo apt-get install ubuntu-make -y
 sudo apt-get install -y virtualbox-guest-x11
