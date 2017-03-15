@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 pat=`echo $SHELL`
 if  [[ $pat == *zsh  ]]  ;
 	then
