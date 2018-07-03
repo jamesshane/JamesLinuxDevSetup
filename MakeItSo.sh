@@ -159,7 +159,7 @@ fi
 if ${ZSH};
 then
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-sed -i 's/robbyrussell/rkj-repos/g' ~/.zshrc
+sed -i 's/robbyrussell/nanotech/g' ~/.zshrc
 fi
 #end
 
